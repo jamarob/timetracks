@@ -28,4 +28,10 @@ const List = styled.ul`
   grid-auto-rows: min-content;
   grid-gap: 16px;
   overflow-y: scroll;
+
+  li:last-child::after {
+    content: '';
+    display: block;
+    height: 16px;
+  }
 `

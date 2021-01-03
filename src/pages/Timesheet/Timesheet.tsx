@@ -21,7 +21,6 @@ export default function Timesheet({ tasks, wip }: Props) {
 const Main = styled.main`
   display: grid;
   grid-template-rows: 1fr min-content;
-  grid-gap: 16px;
   background: #222;
   overflow: hidden;
 `
