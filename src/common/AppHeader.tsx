@@ -12,6 +12,7 @@ export default function AppHeader() {
       </Heading>
       <Nav>
         <PageLink to="/wip">WIP</PageLink>
+        <PageLink to="/tasks">Tasks</PageLink>
         <PageLink to="/timesheet">Timesheet</PageLink>
       </Nav>
     </Header>

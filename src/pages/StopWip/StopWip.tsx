@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 
 import { PauseButton, ElapsedTime, StartTime } from '../../common'
-import { useCurrentTime } from '../../hooks/'
-import { assert } from '../../libs/'
+import { useCurrentTime } from '../../hooks'
+import { assert } from '../../libs'
 import { Wip } from '../../models'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   onStop: () => void
 }
 
-export default function CurrentWipPage({ wip, onStop }: Props) {
+export default function StopWip({ wip, onStop }: Props) {
   assert(wip.start, 'Task not started')
 
   const now = useCurrentTime()

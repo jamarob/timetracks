@@ -2,7 +2,7 @@ import { Redirect, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 import { AppHeader } from './common'
-import { NewWip, CurrentWip, Timesheet } from './pages'
+import { NewWip, StopWip, Timesheet, TasksPage } from './pages'
 import { useTasks } from './hooks'
 
 export default function App() {
@@ -16,11 +16,15 @@ export default function App() {
           path="/wip"
           render={() =>
             wip.start ? (
-              <CurrentWip wip={wip} onStop={stopTask} />
+              <StopWip wip={wip} onStop={stopTask} />
             ) : (
               <NewWip task={wip.name} onStart={startTask} />
             )
           }
+        />
+        <Route
+          path="/tasks"
+          render={() => <TasksPage tasks={tasks} wip={wip} />}
         />
         <Route
           path="/timesheet"

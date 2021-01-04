@@ -1,5 +1,6 @@
 import NewWip from './NewWip/NewWip'
-import CurrentWip from './CurrentWip/CurrentWip'
+import StopWip from './StopWip/StopWip'
 import Timesheet from './Timesheet/Timesheet'
+import TasksPage from './TasksPage/TasksPage'
 
-export { NewWip, CurrentWip, Timesheet }
+export { NewWip, StopWip, Timesheet, TasksPage }
