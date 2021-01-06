@@ -50,7 +50,7 @@ const SecondaryButton = styled(Button)`
   padding: 8px;
 
   &:disabled {
-    color: #444;
+    color: #666;
   }
 `
 

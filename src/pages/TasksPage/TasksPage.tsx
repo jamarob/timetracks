@@ -33,6 +33,5 @@ export default function TasksPage({ tasks, wip }: Props) {
 const Main = styled.main`
   display: grid;
   grid-template-rows: 1fr min-content;
-  background: #222;
   overflow: hidden;
 `

@@ -22,5 +22,4 @@ export default function NewWipPage({ task, onStart }: Props) {
 const Main = styled.main`
   display: grid;
   place-items: center;
-  background: #222;
 `

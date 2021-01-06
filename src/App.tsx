@@ -1,6 +1,8 @@
 import { Redirect, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
+import backgroundUrl from './assets/background.svg'
+
 import { AppHeader } from './common'
 import { NewWip, StopWip, Timesheet, TasksPage } from './pages'
 import { useTasks } from './hooks'
@@ -44,6 +46,7 @@ const PageLayout = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: min-content 1fr;
-  background: #111;
+  background: url(${backgroundUrl}) center no-repeat, #222;
+  background-size: cover;
   color: #eee;
 `

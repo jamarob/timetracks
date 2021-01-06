@@ -30,7 +30,7 @@ export default function CurrentWip({ wip }: Props) {
 
 const WipLink = styled(NavLink)`
   padding: 8px 16px;
-  border-top: 2px solid #111;
+  border-top: 1px solid deeppink;
   text-decoration: none;
   color: #eee;
 `

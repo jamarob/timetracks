@@ -30,8 +30,6 @@ export default function StopWip({ wip, onStop }: Props) {
 const Main = styled.main`
   display: grid;
   place-items: center;
-  background: #222;
-  color: white;
 `
 
 const WipWrapper = styled.section`

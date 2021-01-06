@@ -23,6 +23,7 @@ const Header = styled.header`
   padding: 8px 16px;
   display: grid;
   grid-gap: 8px;
+  background: #111;
 `
 
 const Heading = styled.section`
