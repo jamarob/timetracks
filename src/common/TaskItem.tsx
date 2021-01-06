@@ -19,6 +19,7 @@ export default function TaskItem({ name, time, headline }: Props) {
 const TaskWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr min-content;
+  align-items: center;
 
   > :first-child {
     font-size: 0.5em;

@@ -18,16 +18,24 @@ export default function List<T>({ items, genKey, render }: Props<T>) {
 
 const UnorderedList = styled.ul`
   margin: 0;
-  padding: 16px;
+  padding: 8px 16px;
   list-style: none;
   display: grid;
   grid-auto-rows: min-content;
-  grid-gap: 16px;
   overflow-y: scroll;
 
-  li:last-child::after {
+  li {
+    padding: 8px 0;
+  }
+
+  li + li {
+    padding: 8px 0;
+    border-top: 1px solid #666;
+  }
+
+  li:last-child:after {
     content: '';
     display: block;
-    height: 16px;
+    height: 8px;
   }
 `
