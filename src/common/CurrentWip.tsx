@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { ElapsedTime } from '.'
+import ElapsedTime from './ElapsedTime'
 
 import { useCurrentTime } from '../hooks'
 import { Wip } from '../models'

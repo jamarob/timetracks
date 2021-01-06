@@ -1,8 +1,11 @@
 import styled from 'styled-components/macro'
 import { ElapsedTime, List, CurrentWip, TaskItem } from '../../common'
 import { Task, Wip } from '../../models'
-import { groupTasksByName, sumElapsedTimes } from '../../services'
-import findTimeFrame from '../../services/findTimeFrame'
+import {
+  groupTasksByName,
+  sumElapsedTimes,
+  findTimeFrame,
+} from '../../services'
 import TimeFrame from './TimeFrame'
 
 interface Props {

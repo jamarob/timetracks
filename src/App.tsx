@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import backgroundUrl from './assets/background.svg'
+import { backgroundUrl } from './assets'
 
 import { AppHeader } from './common'
 import { NewWip, StopWip, Timesheet, TasksPage } from './pages'
