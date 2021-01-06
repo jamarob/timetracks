@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { PauseButton, ElapsedTime, StartTime } from '../../common'
+import { IconButton, ElapsedTime, StartTime } from '../../common'
 import { useCurrentTime } from '../../hooks'
 import { assert } from '../../libs'
 import { Wip } from '../../models'
@@ -22,13 +22,14 @@ export default function StopWip({ wip, onStop }: Props) {
         <h2>{wip.name}</h2>
         <ElapsedTime start={wip.start} end={now} />
       </WipWrapper>
-      <PauseButton onClick={onStop} title="Pause" />
+      <IconButton onClick={onStop} icon="stop" size="80px" />
     </Main>
   )
 }
 
 const Main = styled.main`
   display: grid;
+  grid-template-rows: 1fr 1fr;
   place-items: center;
 `
 
