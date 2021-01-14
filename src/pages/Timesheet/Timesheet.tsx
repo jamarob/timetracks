@@ -1,8 +1,13 @@
 import styled from 'styled-components/macro'
 
 import { Task, Wip } from '../../models'
-import CurrentTask from './CurrentTask'
-import TaskList from './TaskList'
+import {
+  CurrentWip,
+  ElapsedTime,
+  List,
+  StartTime,
+  TaskItem,
+} from '../../common'
 
 interface Props {
   tasks: Task[]
@@ -12,8 +17,18 @@ interface Props {
 export default function Timesheet({ tasks, wip }: Props) {
   return (
     <Main>
-      <TaskList tasks={tasks} />
-      <CurrentTask wip={wip} />
+      <List
+        items={tasks}
+        genKey={(task) => task.start.getTime()}
+        render={(task) => (
+          <TaskItem
+            name={task.name}
+            time={<ElapsedTime start={task.start} end={task.end} />}
+            headline={<StartTime time={task.start} />}
+          />
+        )}
+      />
+      <CurrentWip wip={wip} />
     </Main>
   )
 }
@@ -21,6 +36,5 @@ export default function Timesheet({ tasks, wip }: Props) {
 const Main = styled.main`
   display: grid;
   grid-template-rows: 1fr min-content;
-  background: #222;
   overflow: hidden;
 `

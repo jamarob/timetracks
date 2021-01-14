@@ -1,15 +1,16 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
+import ElapsedTime from './ElapsedTime'
 
-import { useCurrentTime } from '../../hooks'
-import { Wip } from '../../models'
+import { useCurrentTime } from '../hooks'
+import { Wip } from '../models'
 import TaskItem from './TaskItem'
 
 interface Props {
   wip: Wip
 }
 
-export default function CurrentTask({ wip }: Props) {
+export default function CurrentWip({ wip }: Props) {
   const now = useCurrentTime()
 
   if (!wip.start) {
@@ -20,8 +21,7 @@ export default function CurrentTask({ wip }: Props) {
     <WipLink to="/wip">
       <TaskItem
         name={wip.name}
-        start={wip.start}
-        end={now}
+        time={<ElapsedTime start={wip.start} end={now} />}
         headline={<Headline>current</Headline>}
       />
     </WipLink>
@@ -30,7 +30,7 @@ export default function CurrentTask({ wip }: Props) {
 
 const WipLink = styled(NavLink)`
   padding: 8px 16px;
-  border-top: 2px solid #111;
+  border-top: 1px solid deeppink;
   text-decoration: none;
   color: #eee;
 `

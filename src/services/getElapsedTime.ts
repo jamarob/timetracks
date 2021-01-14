@@ -2,11 +2,15 @@ const SECOND = 1000
 const MINUTE = SECOND * 60
 const HOUR = MINUTE * 60
 
-export default function calculateElapsedTime(
-  start: Date,
-  end: Date = new Date()
-) {
-  let time = end.getTime() - start.getTime()
+export function getElapsedTime(millis: number): string
+export function getElapsedTime(start: Date, end: Date): string
+export default function getElapsedTime(...args: any[]): string {
+  let time
+  if (typeof args[0] === 'number') {
+    time = args[0]
+  } else {
+    time = args[1].getTime() - args[0].getTime()
+  }
   const hours = Math.floor(time / HOUR)
   time = time % HOUR
   const minutes = Math.floor(time / MINUTE)

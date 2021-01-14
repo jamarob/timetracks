@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 
-import { PauseButton, ElapsedTime, StartTime } from '../../common'
-import { useCurrentTime } from '../../hooks/'
-import { assert } from '../../libs/'
+import { IconButton, ElapsedTime, StartTime } from '../../common'
+import { useCurrentTime } from '../../hooks'
+import { assert } from '../../libs'
 import { Wip } from '../../models'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   onStop: () => void
 }
 
-export default function CurrentWipPage({ wip, onStop }: Props) {
+export default function StopWip({ wip, onStop }: Props) {
   assert(wip.start, 'Task not started')
 
   const now = useCurrentTime()
@@ -22,16 +22,15 @@ export default function CurrentWipPage({ wip, onStop }: Props) {
         <h2>{wip.name}</h2>
         <ElapsedTime start={wip.start} end={now} />
       </WipWrapper>
-      <PauseButton onClick={onStop} title="Pause" />
+      <IconButton onClick={onStop} icon="stop" size="80px" />
     </Main>
   )
 }
 
 const Main = styled.main`
   display: grid;
+  grid-template-rows: 1fr 1fr;
   place-items: center;
-  background: #222;
-  color: white;
 `
 
 const WipWrapper = styled.section`

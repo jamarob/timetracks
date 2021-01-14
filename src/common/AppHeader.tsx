@@ -12,6 +12,7 @@ export default function AppHeader() {
       </Heading>
       <Nav>
         <PageLink to="/wip">WIP</PageLink>
+        <PageLink to="/tasks">Tasks</PageLink>
         <PageLink to="/timesheet">Timesheet</PageLink>
       </Nav>
     </Header>
@@ -22,6 +23,7 @@ const Header = styled.header`
   padding: 8px 16px;
   display: grid;
   grid-gap: 8px;
+  background: #111;
 `
 
 const Heading = styled.section`

@@ -1,20 +1,17 @@
 import styled from 'styled-components/macro'
 
-import { ElapsedTime } from '../../common'
-
 interface Props {
   name: string
-  start: Date
-  end: Date
+  time: JSX.Element
   headline: JSX.Element
 }
 
-export default function TaskItem({ name, start, end, headline }: Props) {
+export default function TaskItem({ name, time, headline }: Props) {
   return (
     <TaskWrapper>
       {headline}
       <Name>{name}</Name>
-      <ElapsedTime start={start} end={end} />
+      {time}
     </TaskWrapper>
   )
 }
@@ -22,6 +19,7 @@ export default function TaskItem({ name, start, end, headline }: Props) {
 const TaskWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr min-content;
+  align-items: center;
 
   > :first-child {
     font-size: 0.5em;

@@ -1,3 +1,6 @@
-import calculateElapsedTime from './calculateElapsedTime'
+import getElapsedTime from './getElapsedTime'
+import sumElapsedTimes from './sumElapsedTimes'
+import groupTasksByName from './groupTasksByName'
+import findTimeFrame from './findTimeFrame'
 
-export { calculateElapsedTime }
+export { getElapsedTime, sumElapsedTimes, groupTasksByName, findTimeFrame }

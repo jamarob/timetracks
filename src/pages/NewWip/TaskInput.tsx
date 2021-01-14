@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { ClearButton } from '../../common'
+import { IconButton } from '../../common'
 
 interface Props {
   task: string
@@ -17,10 +17,10 @@ export default function TaskInput({ task, setTask }: Props) {
         value={task}
         onChange={(event) => setTask(event.target.value)}
       />
-      <ClearButton
+      <IconButton
         disabled={task === ''}
         onClick={() => setTask('')}
-        title="Clear"
+        icon="clear"
       />
     </InputGroup>
   )
